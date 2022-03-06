@@ -14,7 +14,7 @@ function computerPlay () {
 }
 // Write a function below that will play one round of RPS
 
-function playGame (playerSelection, computerSelection) {
+function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerPlay()
     if (playerSelection === computerSelection) {
@@ -42,3 +42,5 @@ function playGame (playerSelection, computerSelection) {
         return 'Sorry I didnt understand'
     }
 }
+
+// Write a function called "game" which calls the playRound function and plays a 5 round game
