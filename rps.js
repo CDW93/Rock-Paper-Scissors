@@ -43,4 +43,15 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
+
 // Write a function called "game" which calls the playRound function and plays a 5 round game
+function game(playerSelection,computerSelection) {
+    playerSelection = window.prompt('Enter your selection')
+    for (let i = 0; i < 5; i++) {
+    console.log(playRound(playerSelection,computerSelection))
+        }
+    }
+
+
+
+
