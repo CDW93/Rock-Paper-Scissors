@@ -3,14 +3,42 @@
 function computerPlay () {
     let randomNum = Math.floor(Math.random() * (2 + 1));
     if (randomNum === 0) {
-        return 'Rock'
+        return 'rock'
     }
     else if (randomNum === 1) {
-        return 'Paper'
+        return 'paper'
     }
     else {
-        return 'Scissors'
+        return 'scissors'
     }
 }
-
 // Write a function below that will play one round of RPS
+
+function playGame (playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerPlay()
+    if (playerSelection === computerSelection) {
+        return 'tie'
+    }
+    else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        return 'You lose, Computer wins! Paper beats rock.'
+    }
+    else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return 'You win, Computer loses! Rock beats scissors.'
+    }
+    else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        return 'You win, Computer loses! Paper beats rock.'
+    }
+    else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        return 'You lose, Computer wins! Scissors beats paper.'
+    }
+    else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        return 'You lose, Computer wins! Rock beats scissors'
+    }
+    else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return 'You win, Computer loses! Scissors beats paper.'
+    }
+    else {
+        return 'Sorry I didnt understand'
+    }
+}
